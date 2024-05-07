@@ -1,16 +1,5 @@
 /* eslint-disable react/prop-types */
 
-// export const CardsComponent = () => {
-//     return (
-//         <div>
-//             <h3>Rick Sanchez</h3>
-//             <img src="" alt="" />
-//             <p>Human</p>
-//         </div>
-//     )
-// }
-
-
 
 export const CardsComponent = (props) => {
 
