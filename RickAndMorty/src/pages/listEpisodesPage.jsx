@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import {EpisodesComponent} from '../components/episodesComponent/episodesComponent';
 
+import './styles.css'
+
+
 export const ListEpisodesPage = () => {
     const [episodes, setEpisodes] = useState([]);
 
@@ -12,9 +15,9 @@ export const ListEpisodesPage = () => {
     }, []);
 
     return (
-        <div>
+        <div >
             <h1>Listado de Episodios de Rick and Morty</h1>
-            <div>
+            <div className='cards-content'>
                 {episodes.map(episode => (
                     <EpisodesComponent
                         id={episode.id}

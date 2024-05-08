@@ -1,0 +1,13 @@
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.875rem;
+    padding: 3rem;
+}
+
+.cards-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.875rem;
+    padding: 3rem;
+}

@@ -1,6 +1,7 @@
 
 import { useState, useEffect} from 'react'
 import { CardsComponent } from "../components/cardsComponent/cardsComponent"
+import './styles.css'
 
 export const ListPersonPage = () => {
 

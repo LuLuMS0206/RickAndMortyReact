@@ -1,0 +1,10 @@
+.cardsContent{
+    background-color: #F7F7F7;
+    box-shadow: 5px 10px 14px 0px rgb(129 136 138 / 29%);
+    text-align: center;
+}
+
+.cardsContent__img{
+    width: 100%;
+}
+
