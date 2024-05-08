@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {ListPersonPage} from './pages/listPersonPage'
+import {ListEpisodesPage} from './pages/listEpisodesPage'
+import {InfoEpisodesPage} from './pages/infoEpisodesPage'
 import {BrowserRouter, Routes,Route } from 'react-router-dom'
 
 
@@ -9,11 +11,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route />
-        <Route />
-        <Route/>
         <Route path='personList' element= {<ListPersonPage/>} />
-        <Route />
+        <Route path='episodes' element= {<ListEpisodesPage/>}  />
+        <Route path='infoEpisodes/:id' element={<InfoEpisodesPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
