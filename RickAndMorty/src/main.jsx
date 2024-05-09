@@ -4,6 +4,7 @@ import {ListPersonPage} from './pages/listPersonPage'
 import {ListEpisodesPage} from './pages/listEpisodesPage'
 import {InfoEpisodesPage} from './pages/infoEpisodesPage'
 import {BrowserRouter, Routes,Route } from 'react-router-dom'
+import { FormCharacterPage } from './pages/formCharacterPage'
 
 
 
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='personList' element= {<ListPersonPage/>} />
         <Route path='episodes' element= {<ListEpisodesPage/>}  />
         <Route path='infoEpisodes/:id' element={<InfoEpisodesPage />} />
+        <Route path='formCharacter' element={<FormCharacterPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
