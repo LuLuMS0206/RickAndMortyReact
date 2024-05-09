@@ -16,8 +16,8 @@ export const ListEpisodesPage = () => {
 
     return (
         <div >
-            <h1>Listado de Episodios de Rick and Morty</h1>
-            <div className='cards-content'>
+            <h1 className='cards__content__text'>Listado de Episodios de Rick and Morty</h1>
+            <div className='cards__content__info'>
                 {episodes.map(episode => (
                     <EpisodesComponent
                         id={episode.id}

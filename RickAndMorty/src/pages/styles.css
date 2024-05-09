@@ -1,13 +1,41 @@
-.cards-container{
+.cards__container__info{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.875rem;
     padding: 3rem;
 }
 
-.cards-content{
+.cards__container__text{
+    text-align: center;
+}
+
+.cards__content__info{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.875rem;
     padding: 3rem;
+}
+
+.cards__content__text{
+    text-align: center;
+}
+
+.infoEpisodes__content__info{
+    display: flex;
+    justify-content: center;
+}
+
+.infoEpisodes__content__text{
+    text-align: center;
+}
+
+.characters__content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.875rem;
+    padding: 3rem;
+}
+
+.characters__content__title{
+    text-align: center;
 }

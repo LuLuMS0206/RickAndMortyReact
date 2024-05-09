@@ -5,7 +5,7 @@ import './episodesComponent.css'
 
 export const EpisodesComponent = (props) => {
     return (
-        <div>
+        <div className='episodesComponent'>
             <h3>{props.name}</h3>
             <p>Fecha de Publicación: {props.airDate}</p>
             <NavLink to={`/infoEpisodes/${props.id}`}>

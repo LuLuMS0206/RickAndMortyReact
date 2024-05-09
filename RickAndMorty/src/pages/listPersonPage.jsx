@@ -20,8 +20,8 @@ export const ListPersonPage = () => {
     // con el .map itero sobre el array
     return (
         <div>
-            <h1>Listado de Personajes de Rick and Morty</h1>
-            <div className="cards-container">
+            <h1 className='cards__container__text'>Listado de Personajes de Rick and Morty</h1>
+            <div className="cards__container__info">
                 {characters.map(character => (
                     <CardsComponent
                         key={character.id}
