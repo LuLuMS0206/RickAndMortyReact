@@ -8,7 +8,6 @@ export const InfoEpisodesComponent = (props) => {
             <p>Fecha de publicación: {props.airDate}</p>
             <p>Número episodio: {props.episode}</p>
             <p>Creado: {props.created}</p>
-    
         </div>
     );
 }
