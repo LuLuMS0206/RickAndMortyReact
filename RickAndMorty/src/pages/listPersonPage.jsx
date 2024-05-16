@@ -41,8 +41,6 @@ export const ListPersonPage = () => {
     // }, []);
 
 
-
-
     // con el .map itero sobre el array
     return (
         <>

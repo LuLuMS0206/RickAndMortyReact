@@ -27,23 +27,28 @@ export const InfoEpisodesPage = () => {
             .then((response) => {
                 if (response.ok) {
                     response.json().then((jsonData) => {
-                        setInfoEpisodes(jsonData)
-                        let ids = []
+                        setInfoEpisodes(jsonData);
+                        let ids = [];
                         jsonData.characters.map((character) => {
-                            ids.push(character.split('/')[5])
-                        })
+                            ids.push(character.split('/')[5]);
+                        });
                         fetch(`https://rickandmortyapi.com/api/character/${ids.join(',')}`)
                             .then((response) => {
                                 if (response.ok) {
                                     response.json().then((jsonCharacter) => {
-                                        setCharacters(jsonCharacter)
-                                    })
+                                        setCharacters(jsonCharacter);
+                                    });
+                                } else {
+                                    console.log("error");
                                 }
-                            })
-                    })
+                            });
+                    });
+                } else {
+                    console.log("error");
                 }
-            })
-    }, [])
+            });
+    }, []);
+    
 
     return (
         <div className='infoEpisodes__content'>

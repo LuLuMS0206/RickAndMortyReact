@@ -1,27 +1,31 @@
 import { NavLink } from "react-router-dom"
+import { Outlet } from "react-router-dom"
+import './navbarComponent.css'
 
-export const Navbar = () => {
+export const NavbarComponent = () => {
 
     return (
         <>
-            <nav>
+            <nav className="navbar__content">
 
                 <div>
-                    <NavLink>
-                        <h2>Ricky And Morty</h2>
+                    <NavLink to = 'personList'>
+                        <h2 className="navbar__content__titlte">Ricky And Morty</h2>
                     </NavLink>
                 </div>
 
-                <div>
-                    <NavLink>
-                        <button>Episodes</button>
+                <div className="navbar__content__buttons">
+                    <NavLink to = 'episodes'>
+                        <button className="navbar__content__button">Episodes</button>
                     </NavLink>
 
-                    <NavLink>
-                        <button>Add Character</button>
+                    <NavLink to = 'formCharacter'>
+                        <button className="navbar__content__button">Add Character</button>
                     </NavLink>
                 </div>
             </nav>
+
+            <Outlet/>
 
         </>
     )
