@@ -1,15 +1,22 @@
 import { useDispatch } from "react-redux"
-import {addRickyAndMorty} from "../../features/rickyAndMortySlice"
+import { addRickyAndMorty } from "../../features/rickyAndMortySlice"
+import { useNavigate } from "react-router-dom"
 
 export const FormNewCharacterComponent = () => {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
+
     const SubmitEvent = (event) => {
-event.preventDefault()
-const image = 'https://rickandmortyapi.com/api/character/avatar/19.jpeg'
-const name = event.target.elements.name.value
-const species = event.target.elements.specie.value
-dispatch (addRickyAndMorty({name, species, image}))
+        event.preventDefault()
+        const image = 'https://rickandmortyapi.com/api/character/avatar/19.jpeg'
+        const name = event.target.elements.name.value
+        const species = event.target.elements.specie.value
+        dispatch(addRickyAndMorty({ name, species, image }))
+        navigate ('/personList')
     }
+
+
+
     return (
         <>
             {
@@ -19,6 +26,7 @@ dispatch (addRickyAndMorty({name, species, image}))
                     <label htmlFor="specie" className='FormCharacterComponent__form__label'>Specie</label>
                     <input id="specie" name="specie" className='FormCharacterComponent__form__input' type='text' placeholder='Specie'></input>
                     <button className='FormCharacterComponent__form__button'>Send</button>
+
                 </form>
             }
         </>

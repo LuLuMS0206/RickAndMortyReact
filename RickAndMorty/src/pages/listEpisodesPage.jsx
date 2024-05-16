@@ -34,6 +34,7 @@ export const ListEpisodesPage = () => {
     //         .then(response => response.json())
     //         .then(data => setEpisodes(data.results))
     // }, []);
+    console.log(episodes)
 
     return (
         <>
@@ -42,10 +43,10 @@ export const ListEpisodesPage = () => {
             <div className='cards__content__info'>
                 {episodes.map(episode => (
                     <EpisodesComponent
-                        id={episode.id}
-                        key={episode.id}
+                        id={episode.key}
+                        key={episode.key}
                         name={episode.name}
-                        airDate={episode.air_date}
+                        airDate={episode.airDate}
                     />
                 ))}
             </div>
