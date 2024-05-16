@@ -1,8 +1,13 @@
 .button__episodes{
-    padding: 0.5rem;
-    background-color: white;
-    border: 1px solid black;
+    border: none;
     border-radius: 0.5rem;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+}
+
+.button__episodes:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.886);
 }
 
 .episodesComponent{
