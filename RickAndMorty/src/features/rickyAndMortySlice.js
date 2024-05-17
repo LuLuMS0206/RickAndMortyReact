@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { GetRickyAndMortyThunk, GetEpisodesThunk } from "../features/rickyAndMortyThunk";
+import { GetRickyAndMortyThunk, GetEpisodesThunk, GetInfoEpisodesThunk } from "../features/rickyAndMortyThunk";
 
 export const rickyAndMortySlice = createSlice({
     name: 'RickyAndMorty',
@@ -61,8 +61,40 @@ export const episodeSlice = createSlice({
 });
 
 
+export const infoEpisodeSlice = createSlice({
+    name: 'infoEpisodes',
+    initialState: {
+        status: 'idle',
+        data: [],
+        error: null
+    },
+    reducers: {
+        addInfoEpisode: (state, action) => {
+            state.data.push(action.payload);
+        },
+    },
+    extraReducers: (builder) => {
+        builder
+        .addCase( GetInfoEpisodesThunk.pending, (state, action) => {
+            state.status = 'pending';
+        })
+        .addCase( GetInfoEpisodesThunk.fulfilled, (state, action) => {
+            state.status = 'fulfilled';
+            state.data = action.payload;
+        })
+        .addCase( GetInfoEpisodesThunk.rejected, (state, action) => {
+            state.status = 'rejected';
+            state.error = '';
+        });
+    
+    }
+});
+
+
 export const { addRickyAndMorty } = rickyAndMortySlice.actions;
 
 export const { addEpisode } = episodeSlice.actions;
+
+export const { addInfoEpisode } = infoEpisodeSlice.actions;
 
 

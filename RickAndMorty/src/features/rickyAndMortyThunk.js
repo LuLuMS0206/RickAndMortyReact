@@ -28,3 +28,20 @@ export const GetEpisodesThunk = createAsyncThunk('RickyAndMorty/getRickyAndMorty
         return arrayResults; 
     }
 });
+
+
+export const GetInfoEpisodesThunk = createAsyncThunk('RickyAndMorty/getRickyAndMorty', async () => {
+    const request = await fetch(`https://rickandmortyapi.com/api/episode/${id}`);
+    if (request.ok) {
+        const data = await request.json();
+        let arrayResults = data.results.map((infoEpisode, index) => ({
+            key: index,
+            name: infoEpisode.name,
+            airDate: infoEpisode.air_date,
+            episode:infoEpisode.episode,
+            url:infoEpisode.url,
+            created:infoEpisode.created
+        }));
+        return arrayResults; 
+    }
+});

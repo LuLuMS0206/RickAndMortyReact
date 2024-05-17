@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux"
 import { addRickyAndMorty } from "../../features/rickyAndMortySlice"
 import { useNavigate } from "react-router-dom"
+import './formNewCharacterComponent.css'
 
 export const FormNewCharacterComponent = () => {
     const dispatch = useDispatch()
@@ -26,7 +27,6 @@ export const FormNewCharacterComponent = () => {
                     <label htmlFor="specie" className='FormCharacterComponent__form__label'>Specie</label>
                     <input id="specie" name="specie" className='FormCharacterComponent__form__input' type='text' placeholder='Specie'></input>
                     <button className='FormCharacterComponent__form__button'>Send</button>
-
                 </form>
             }
         </>
