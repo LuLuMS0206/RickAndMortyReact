@@ -1,13 +1,13 @@
 
 import { configureStore } from "@reduxjs/toolkit";
-import { rickyAndMortySlice } from "../features/rickyAndMortySlice";
-import {episodeSlice} from "../features/rickyAndMortySlice";
-import {infoEpisodeSlice} from "../features/rickyAndMortySlice";
+import {episodeSlice} from "../features/episodes/episodesSlice";
+import {infoEpisodeSlice} from "../features/infoEpisodes/infoEpisodesSlice";
+import { charactersSlice } from "../features/characters/charactersSlice";
 
 export const Store = configureStore({
     reducer: {
-        RickyAndMorty: rickyAndMortySlice.reducer,
+        characters: charactersSlice.reducer,
         episodes: episodeSlice.reducer,
-        infoEpisode: infoEpisodeSlice.reducer
+        infoEpisodes: infoEpisodeSlice.reducer
     }
 });

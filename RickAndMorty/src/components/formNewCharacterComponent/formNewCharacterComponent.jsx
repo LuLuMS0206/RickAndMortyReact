@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux"
-import { addRickyAndMorty } from "../../features/rickyAndMortySlice"
+import { addCharacters } from "../../features/characters/charactersSlice"
 import { useNavigate } from "react-router-dom"
 import './formNewCharacterComponent.css'
 
@@ -12,7 +12,7 @@ export const FormNewCharacterComponent = () => {
         const image = 'https://rickandmortyapi.com/api/character/avatar/19.jpeg'
         const name = event.target.elements.name.value
         const species = event.target.elements.specie.value
-        dispatch(addRickyAndMorty({ name, species, image }))
+        dispatch(addCharacters({ name, species, image }))
         navigate ('/personList')
     }
 

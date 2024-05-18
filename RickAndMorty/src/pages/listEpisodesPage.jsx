@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import {EpisodesComponent} from '../components/episodesComponent/episodesComponent';
-import {GetEpisodesThunk} from '../features/rickyAndMortyThunk'
+import {GetEpisodesThunk} from '../features/episodes/episodesThunk'
 import { useDispatch, useSelector } from 'react-redux';
 
 import './styles.css'
@@ -11,8 +11,8 @@ export const ListEpisodesPage = () => {
     const [episodes, setEpisodes] = useState([]);
     const [loading, setLoading] = useState(false);
     const dispatch = useDispatch()
-    const Episodes = useSelector((state) => state.RickyAndMorty.data)
-    const EpisodesStatus = useSelector((state) => state.RickyAndMorty.status)
+    const Episodes = useSelector((state) => state.episodes.data)
+    const EpisodesStatus = useSelector((state) => state.episodes.status)
     // const CharactersError = useSelector((state) => state.RickyAndMorty.error)
 
     useEffect(() => {

@@ -4,7 +4,8 @@ import { CardsComponent } from "../components/cardsComponent/cardsComponent"
 import './styles.css'
 import { useDispatch, useSelector } from 'react-redux';
 // import { addRickyAndMorty } from '../features/rickyAndMortySlice';
-import { GetRickyAndMortyThunk } from '../features/rickyAndMortyThunk'
+import {GetCharactersThunk} from "../features/characters/charactersThunk"
+
 
 export const ListPersonPage = () => {
 
@@ -12,13 +13,13 @@ export const ListPersonPage = () => {
     const [characters, setCharacters] = useState([]);
     const [loading, setLoading] = useState(false);
     const dispatch = useDispatch()
-    const Characters = useSelector((state) => state.RickyAndMorty.data)
-    const CharactersStatus = useSelector((state) => state.RickyAndMorty.status)
+    const Characters = useSelector((state) => state.characters.data)
+    const CharactersStatus = useSelector((state) => state.characters.status)
     // const CharactersError = useSelector((state) => state.RickyAndMorty.error)
 
     useEffect(() => {
         if (CharactersStatus === 'idle') {
-            dispatch(GetRickyAndMortyThunk())
+            dispatch(GetCharactersThunk())
         } else if (CharactersStatus === 'pending'){
             setLoading(true)
         } else if (CharactersStatus === 'fulfilled'){
